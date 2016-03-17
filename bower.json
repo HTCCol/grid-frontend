@@ -1,0 +1,23 @@
+{
+  "name": "hpclab_ui_front_end",
+  "description": "Este es repositorio del front end del proyecto hpc de la Universidad Tecnologica de Bolivar.",
+  "authors": [
+    "Angel de Jesus Jimenez Escobar"
+  ],
+  "license": "AGPL-3.0",
+  "keywords": [
+    "Angular",
+    "Hpc",
+    "UTB"
+  ],
+  "homepage": "https://github.com/anheru88/hpclabUIfrontend",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
