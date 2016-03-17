@@ -23,5 +23,9 @@
   "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend#readme",
   "dependencies": {
     "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "browser-sync-spa": "^1.0.3"
   }
 }
