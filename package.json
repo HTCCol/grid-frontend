@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend/issues"
   },
-  "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend#readme"
+  "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
 }
