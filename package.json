@@ -22,10 +22,14 @@
   },
   "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "wrench": "^1.5.8"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
-    "browser-sync-spa": "^1.0.3"
+    "browser-sync-spa": "^1.0.3",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.8"
   }
 }
