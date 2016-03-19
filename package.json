@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend#readme",
   "dependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-util": "^3.0.7",
     "wrench": "^1.5.8"
   },
   "devDependencies": {
