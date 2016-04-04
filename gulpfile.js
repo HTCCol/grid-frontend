@@ -1,33 +1,30 @@
+/**
+ * Bienvenido al archivo de configuracion de gulp
+ * Las tareas de gulp estan divididas en varios archivos
+ * en el directorio gulp porque ponerlos aqui hace el documento
+ * muy largo y dificil de mantener.
+ */
+
 'use strict';
 
 var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var spa = require("browser-sync-spa");
-var stylus = require('gulp-stylus');
+var wrench = require('wrench');
 
-gulp.task('serve', function () {
-	browserSync.use(spa({
-		selector : "[ng-app]" // Only needed for angular apps
-	}));
 
-	browserSync.init({
-		server: {
-			baseDir: "./app"
-		}
-	});
-
-	gulp.watch("app/**/*").on("change", browserSync.reload);
+/**
+ * Esto carga todos los js o coffee dentro de la carpeta gulp
+ */
+wrench.readdirSyncRecursive('./gulp').filter(function(file) {
+	return (/\.(js|coffee)$/i).test(file);
+}).map(function(file) {
+	require('./gulp/' + file);
 });
 
-gulp.task('stylus', function(){
-	gulp.src('app/stylus/main.styl')
-		.pipe(stylus())
-		.pipe(gulp.dest('app/css'))
+/**
+ * Tarea por defecto borra archivos temporales y lanza la
+ * tarea para optimizar.
+ */
+
+gulp.task('default', ['clean'], function () {
+	//gulp.start('build');
 });
-
-
-gulp.task('watch', function(){
-	gulp.watch('app/stylus/*.styl', ['stylus']);
-});
-
-gulp.task('default', ['stylus', 'serve'])
