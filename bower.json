@@ -21,6 +21,10 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.2"
+    "angular": "^1.5.2",
+    "angular-jwt": "^0.0.9",
+    "angular-ui-router": "^0.2.18",
+    "animate.css": "^3.5.1",
+    "material-design-iconic-font": "^2.2.0"
   }
 }
