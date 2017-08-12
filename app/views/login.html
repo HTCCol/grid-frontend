@@ -1,37 +1,80 @@
 <div class="row">
-    <div class="col s12 l4 offset-l4 m6 offset-m3">
-        <div class="card hoverable">
-            <div class="card-image">
-                <img src="images/utb.jpg">
-                <span class="card-title">hpcLabUI</span>
-            </div>
-            <div class="card-content">
-                <form name="loginForm" novalidate>
-                    <div class="row">
-                        <div class="input-field">
-                            <label for="username">Nombre de usuario</label>
-                            <input class="validate center" name="username" type="text" id="username" ng-required="true"
-                                   ng-model="user.username"
-                                   pattern="^[(t|T]?([0-9]{8})$"/>
-                        </div>
+    <div class="col s12">
+        <ul class="tabs" tabs>
+            <li class="tab col s3"><a href="#test1">Login</a></li>
+            <li class="tab col s3"><a href="#test2">Recursos</a></li>
+            <li class="tab col s3"><a href="#test3">Disponibilidad</a></li>
+        </ul>
+    </div>
+    <div id="test1" class="col s12">
+        <div class="row">
+            <div class="col s12 l4 offset-l4 m6 offset-m3">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="images/utb.jpg">
+                        <span class="card-title">hpcLabUI</span>
                     </div>
-                    <div class="row">
-                        <div class="input-field">
-                            <label for="password">Contraseña</label>
-                            <input class="validate center" name="password" type="password" id="password"
-                                   ng-required="true"
-                                   ng-model="user.password"
-                                   pattern="^[A-Za-z0-9]{6}$"/>
-                        </div>
+                    <div class="card-content">
+                        <form name="loginForm" novalidate>
+                            <div class="row">
+                                <div class="input-field">
+                                    <label for="username">Nombre de usuario</label>
+                                    <input class="validate center" name="username" type="text" id="username" ng-required="true"
+                                           ng-model="user.username"
+                                           pattern="^[(t|T]?([0-9]{8})$"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field">
+                                    <label for="password">Contraseña</label>
+                                    <label for="password">Contraseña</label>
+                                    <input class="validate center" name="password" type="password" id="password"
+                                           ng-required="true"
+                                           ng-model="user.password"
+                                           pattern="^[A-Za-z0-9]{6}$"/>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                    <div class="card-action center-align">
+                        <button class="btn waves-effect waves-light" ng-disabled="loginForm.$invalid || loginForm.$pristine"
+                                ng-click="login(user)">Iniciar sesión
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="card-action center-align">
-                <button class="btn waves-effect waves-light" ng-disabled="loginForm.$invalid || loginForm.$pristine"
-                        ng-click="login(user)">Iniciar sesión
-                </button>
+        </div>
+    </div>
+    <div id="test2" class="col s12">
+        <div class="row">
+            <div class="col s12 l4 offset-l4 m6 offset-m3">
+                <h2>Licencias</h2>
+                <img src="https://grid.unitecnologica.edu.co/munin/licencias/licencias/cpu-day.png">
+                <h2>Master Grid</h2>
+                <img src="https://grid.unitecnologica.edu.co/munin/spider/spider/cpu-day.png">
+                <h2>Spider 01</h2>
+                <img src="https://grid.unitecnologica.edu.co/munin/spider01/spider01/cpu-day.png">
+                <h2>Spider 03</h2>
+                <img src="https://grid.unitecnologica.edu.co/munin/spider03/spider03/cpu-day.png">
+            </div>
+        </div>
+    </div>
+    <div id="test3" class="col s12">
+        <div class="row">
+            <div class="col s12">
+                <div  class="container">
+                    <h2>listado de disponibilidad</h2>
+                    <label for="show">el archivo de raiz se actualiza cada minuto</label>
+                    <a class="waves-effect waves-light btn" ng-init="showContent()" ng-click="showContent()">Actualizar<i class="material-icons left">replay</i></a> 
+                    <div ng-if="content">
+                        <pre>{{ content }}</pre>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
 

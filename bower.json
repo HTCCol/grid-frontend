@@ -1,5 +1,5 @@
 {
-  "name": "hpclabUIfrontend",
+  "name": "hpclabuifrontend",
   "version": "0.0.0",
   "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend",
   "authors": [
@@ -27,6 +27,12 @@
     "angular-animate": "^1.5.0",
     "angular-aria": "^1.5.0",
     "angular-sanitize": "^1.5.0",
-    "angular-materialize": "^0.1.2"
+    "angular-materialize": "^0.1.2",
+    "node-uuid": "^1.4.7",
+    "angular-uuid4": "^0.3.1",
+    "Materialize": "materialize#^0.97.6"
+  },
+  "resolutions": {
+    "angular": "1.5.0"
   }
 }
