@@ -1,24 +1,52 @@
 {
-  "name": "hpclabuifrontend",
+  "name": "hpclab_ui_front_end",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este es repositorio del front end del proyecto hpc de la Universidad Tecnologica de Bolivar.",
+  "main": " ",
+  "scripts": {
+    "test": "gulp test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend.git"
   },
-  "author": "",
-  "license": "GPL-3.0",
+  "keywords": [
+    "Angular",
+    "Hpc",
+    "UTB"
+  ],
+  "author": "Angel de Jesus Jimenez Escobar",
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend/issues"
   },
   "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend#readme",
   "dependencies": {
+<<<<<<< HEAD
     "angular-uuid": "0.0.2",
     "browser-sync": "^2.9.6",
     "browser-sync-spa": "^1.0.3",
     "gulp": "^3.9.0",
     "gulp-bower": "0.0.10",
     "gulp-stylus": "^2.1.0"
+=======
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-inject": "^4.0.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-util": "^3.0.7",
+    "lodash": "^4.6.1",
+    "wiredep": "^4.0.0",
+    "wrench": "^1.5.8"
+>>>>>>> login
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "browser-sync-spa": "^1.0.3",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.8"
+  }
 }

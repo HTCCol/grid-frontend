@@ -1,11 +1,24 @@
 {
+<<<<<<< HEAD
   "name": "hpclabuifrontend",
   "version": "0.0.0",
   "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend",
+=======
+  "name": "hpclab_ui_front_end",
+  "description": "Este es repositorio del front end del proyecto hpc de la Universidad Tecnologica de Bolivar.",
+>>>>>>> login
   "authors": [
-    ""
+    "Angel de Jesus Jimenez Escobar"
   ],
-  "license": "GPL-3.0",
+  "license": "AGPL-3.0",
+  "keywords": [
+    "Angular",
+    "Hpc",
+    "UTB"
+  ],
+  "homepage": "https://github.com/anheru88/hpclabUIfrontend",
+  "moduleType": [],
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,6 +27,7 @@
     "tests"
   ],
   "dependencies": {
+<<<<<<< HEAD
     "angular": "1.5.0",
     "angular-messages": "~1.4.6",
     "angular-route": "~1.4.6",
@@ -34,5 +48,12 @@
   },
   "resolutions": {
     "angular": "1.5.0"
+=======
+    "angular": "^1.5.2",
+    "angular-jwt": "^0.0.9",
+    "angular-ui-router": "^0.2.18",
+    "animate.css": "^3.5.1",
+    "material-design-iconic-font": "^2.2.0"
+>>>>>>> login
   }
 }

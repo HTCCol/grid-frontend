@@ -1,6 +1,5 @@
-/npm-debug.log
-/.idea
-/.brackets.json
-/app/bower_components
-/app/css/main.css
-/node_modules
+.idea/
+.tmp/
+bower_components/
+dist/
+node_modules/
