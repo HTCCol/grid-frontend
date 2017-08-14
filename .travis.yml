@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - 'stable'
+- stable
 before_script:
-  - npm install -g bower
-  - bower install
+- npm install -g bower
+- bower install
+notifications:
+  slack:
+    secure: Z+MevRS6HCqLlGN8Ki08GMsnvXbM/TvNX8pLIn9y/urw6Kt2cQCMlVez/QnEC7x0ngCaO3sz7t9/S8C1LmQX5olJi/7+wG6Ov0rk3MZsampG1SelIdd+tsIiG38K68Eai63chuJY6x/ziR2ICPEZVUEYtv1SadJC4deoY7k298n6Ip4GgCDCsyohjf8CJY9xxi4NQiTqGCl/WDiqNyosZPGwD4Eq4/KMvSLCAeBM72KeBzu1tP75ztXZrjQuQq1R9UEM3vMpixvMrLgzFg1H+cJhRpDOSQf3NsElghC2qfBzVPLbKyCeIVaHMYTwJjojleIdrkDWUu7/wiY7NKN991lgf4G1oKap0teJNpfBCxou4Mq6STm6jdJzk0knrAR4ZOgNlX4+dZxqUZ0XZRFP2PUzaU+n5qQv70Im0N9ydPnc33dAcf2/jFrqPWol63XhTm7FhdPhbz9I46wiT404qX2lpuyvEk8aVJRneTvl/6b/XglkuX0tG0MVxDydXwT03skJ08tujeM6lprhszoJiCLqSb4yC0Nc2MALLdQb4jdswqF1KZaI8KeAM25ZnakaCOFybPBLN85yH4UK23gkya1VOcHxyr0NdoXEcBtYumYn0UrALHdYPC2S+s0y/0wFEE8jt+HjtxzgKfwOWy+Np0lTNGa3qNJmLY0DgY/q3Bo=
