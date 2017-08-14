@@ -1,33 +1,26 @@
 {
-  "name": "hpclabUIfrontend",
-  "version": "0.0.0",
-  "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend",
-  "authors": [
-    ""
-  ],
+  "name": "hpclabuifrontend",
+  "version": "2.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend.git"
+  },
+  "author": "",
   "license": "GPL-3.0",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "bugs": {
+    "url": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend/issues"
+  },
+  "homepage": "https://github.com/IngenieriaDeSistemasUTB/hpclabUIfrontend#readme",
   "dependencies": {
-    "angular": "1.5.0",
-    "angular-messages": "~1.4.6",
-    "angular-route": "~1.4.6",
-    "angular-ui-router": "~0.2.15",
-    "oclazyload": "~1.0.5",
-    "angular-jwt": "~0.0.9",
-    "ng-file-upload": "~9.1.1",
-    "angular-resource": "~1.4.7",
-    "lodash": "~4.0.0",
-    "textAngular": "~1.5.0",
-    "angular-animate": "^1.5.0",
-    "angular-aria": "^1.5.0",
-    "angular-sanitize": "^1.5.0",
-    "angular-materialize": "^0.1.2",
-    "materialize": "^0.100.1"
+    "angular": "~1.5.0",
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.5.0"
+  },
+  "overrides": {
+  },
+  "resolutions": {
+    "angular": "~1.5.0"
   }
 }
