@@ -1,12 +1,11 @@
 <!doctype html>
-<html>
+<html ng-app="CondorUi">
   <head>
     <meta charset="utf-8">
-    <title>FountainJS</title>
+    <title>Condor UI</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
-  
+
     <!-- build:css({.tmp,src}) styles/vendor.css -->
     <!-- bower:css -->
     <!-- run `gulp inject` to automatically populate bower styles dependencies -->
@@ -14,13 +13,12 @@
     <!-- endbuild -->
 
     <!-- build:css({.tmp,src}) styles/app.css -->
-    <link rel="stylesheet" href="index.css"/>
     <!-- endbuild -->
   </head>
 
 
-  <body ng-app="app">
-    <app>Loading...</app>
+  <body>
+    <ui-view></ui-view>
   </body>
 
   <!-- build:js({.tmp,src}) scripts/vendor.js -->
