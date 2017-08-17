@@ -69,5 +69,10 @@
     "extends": [
       "xo-space"
     ]
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "gulp-bower": "0.0.13",
+    "gulp-ng-config": "^1.4.0"
   }
 }
