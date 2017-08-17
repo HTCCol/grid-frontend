@@ -1,9 +1,12 @@
+.env
 .tmp/
 /.brackets.json
 /.idea
-/app/bower_components
 /npm-debug.log
 bower_components/
+config.js
+config.json
 coverage/
 dist/
 node_modules/
+src/app/config/config.module.js

@@ -1,6 +1,7 @@
 (function () {
   'use strict';
   angular.module('CondorUi', [
+    'CondorUi.config',
     'CondorUi.core',
     'CondorUi.login'
   ])
