@@ -1,33 +1,40 @@
-'use strict';
+const gulp = require('gulp');
+const HubRegistry = require('gulp-hub');
+const browserSync = require('browser-sync');
 
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var spa = require("browser-sync-spa");
-var stylus = require('gulp-stylus');
+const conf = require('./conf/gulp.conf');
 
-gulp.task('serve', function () {
-	browserSync.use(spa({
-		selector : "[ng-app]" // Only needed for angular apps
-	}));
+// Load some files into the registry
+const hub = new HubRegistry([conf.path.tasks('*.js')]);
 
-	browserSync.init({
-		server: {
-			baseDir: "./app"
-		}
-	});
+// Tell gulp to use the tasks just loaded
+gulp.registry(hub);
 
-	gulp.watch("app/**/*").on("change", browserSync.reload);
-});
+gulp.task('inject', gulp.series(gulp.parallel('styles', 'scripts'), 'inject'));
+gulp.task('build', gulp.series('ng-config', 'partials', gulp.parallel('inject', 'other'), 'build'));
+gulp.task('test', gulp.series('scripts', 'karma:single-run'));
+gulp.task('test:auto', gulp.series('watch', 'karma:auto-run'));
+gulp.task('serve', gulp.series('ng-config', 'inject', 'watch', 'browsersync'));
+gulp.task('serve:dist', gulp.series('default', 'browsersync:dist'));
+gulp.task('default', gulp.series('clean', 'build'));
+gulp.task('watch', watch);
 
-gulp.task('stylus', function(){
-	gulp.src('app/stylus/main.styl')
-		.pipe(stylus())
-		.pipe(gulp.dest('app/css'))
-});
+function reloadBrowserSync(cb) {
+  browserSync.reload();
+  cb();
+}
 
+function watch(done) {
+  gulp.watch([
+    conf.path.src('index.html'),
+    'bower.json'
+  ], gulp.parallel('inject'));
 
-gulp.task('watch', function(){
-	gulp.watch('app/stylus/*.styl', ['stylus']);
-});
-
-gulp.task('default', ['stylus', 'serve'])
+  gulp.watch(conf.path.src('app/**/*.html'), gulp.series('partials', reloadBrowserSync));
+  gulp.watch([
+    conf.path.src('**/*.styl'),
+    conf.path.src('**/*.css')
+  ], gulp.series('styles'));
+  gulp.watch(conf.path.src('**/*.js'), gulp.series('inject'));
+  done();
+}

@@ -1,6 +1,12 @@
-/npm-debug.log
-/.idea
+.env
+.tmp/
 /.brackets.json
-/app/bower_components
-/app/css/main.css
-/node_modules
+/.idea
+/npm-debug.log
+bower_components/
+config.js
+config.json
+coverage/
+dist/
+node_modules/
+src/app/config/config.module.js
