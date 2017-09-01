@@ -9,6 +9,5 @@ function scripts() {
   return gulp.src([conf.path.src('**/*.js'), "!src/content/**"])
     .pipe(eslint())
     .pipe(eslint.format())
-
     .pipe(gulp.dest(conf.path.tmp()));
 }
