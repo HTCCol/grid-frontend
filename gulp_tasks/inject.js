@@ -1,3 +1,5 @@
+"use strict";
+
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const wiredep = require('wiredep').stream;
@@ -13,7 +15,8 @@ function inject() {
     conf.path.tmp('**/*.js'),
     `!${conf.path.tmp('**/*.spec.js')}`
   ])
-  .pipe(angularFilesort()).on('error', conf.errorHandler('AngularFilesort'));
+    .pipe(angularFilesort()).on('error', conf.errorHandler('AngularFilesort'));
+  ;
 
   const injectOptions = {
     ignorePath: [conf.paths.src, conf.paths.tmp],
