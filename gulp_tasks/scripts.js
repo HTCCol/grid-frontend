@@ -6,7 +6,7 @@ const conf = require('../conf/gulp.conf');
 gulp.task('scripts', scripts);
 
 function scripts() {
-  return gulp.src(conf.path.src('**/*.js'))
+  return gulp.src([conf.path.src('**/*.js'), "!src/content/**"])
     .pipe(eslint())
     .pipe(eslint.format())
 
