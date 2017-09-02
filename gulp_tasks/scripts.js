@@ -7,7 +7,11 @@ gulp.task('scripts', scripts);
 
 function scripts() {
   return gulp.src([conf.path.src('**/*.js'), "!src/content/**"])
-    .pipe(eslint())
+    .pipe(eslint({
+      rules:{
+        "linebreak-style": 0
+      }
+    }))
     .pipe(eslint.format())
     .pipe(gulp.dest(conf.path.tmp()));
 }

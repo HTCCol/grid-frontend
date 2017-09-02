@@ -28,7 +28,8 @@
     "angular-touch": "^1.6.5",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
-    "material-kit": "^1.1.0"
+    "material-kit": "^1.1.0",
+    "jquery": "2.2.4"
   },
   "devDependencies": {
     "angular-mocks": "^1.6.2"
@@ -40,13 +41,19 @@
         "dist/css/bootstrap.min.css"
       ]
     },
-    "material-kit" : {
-      "main" : [
-        "assets/js/material-min.js",
+    "material-kit": {
+      "main": [
+        "assets/js/material.min.js",
         "assets/js/nouislider.min.js",
         "assets/js/bootstrap-datepicker.js",
         "assets/js/material-kit.js",
         "assets/css/material-kit.css"
+      ]
+    },
+    "angular-toastr": {
+      "main": [
+        "dist/angular-toastr.tpls.min.js",
+        "dist/angular-toastr.css"
       ]
     }
   }
