@@ -3,7 +3,7 @@
   angular.module('CondorUi', [
     'CondorUi.config',
     'CondorUi.core',
-    'CondorUi.login'
+    'CondorUi.login',
   ])
     .run(function () {
       console.log('CondorUi is Ready');

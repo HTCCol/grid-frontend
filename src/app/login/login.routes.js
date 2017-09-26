@@ -12,7 +12,16 @@
 
     $stateProvider.state('login', {
       url: '/login',
-      templateUrl: 'app/login/login.html'
+      templateUrl: 'app/login/login.html',
+      controller: 'LoginController',
+      resolve: {
+        verifyToken: function ($location, jwtHelper) {
+          var token = localStorage.getItem('token');
+          if (token && !jwtHelper.isTokenExpired(token)) {
+            $location.path("/");
+          }
+        }
+      }
     });
   }
 
