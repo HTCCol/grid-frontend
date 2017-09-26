@@ -5,9 +5,8 @@
     .config(configure);
 
   /* @ngInject */
-  function configure($locationProvider, $httpProvider, $urlRouterProvider) {
+  function configure($locationProvider, $httpProvider) {
 
-    $urlRouterProvider.otherwise("/login");
 
     if (window.history && window.history.pushState) {
       $locationProvider.html5Mode({
@@ -20,6 +19,7 @@
       return {
         request: function (conf) {
           var token = localStorage.getItem('token');
+
           if (token && !jwtHelper.isTokenExpired(token)) {
             conf.headers.Authorization = 'Bearer ' + token;
           } else {

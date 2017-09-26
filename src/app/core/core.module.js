@@ -6,7 +6,7 @@
      * Angular modules
      */
     'ui.router', // Angular flexible routing
-    'angular-jwt',
+    'angular-jwt', // Angular Jwt helper
     /*
      * Our reusable cross app code modules
      */
