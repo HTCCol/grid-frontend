@@ -4,8 +4,9 @@
     'CondorUi.config',
     'CondorUi.core',
     'CondorUi.login',
+    'CondorUi.dashboard'
   ])
-    .run(function () {
-      console.log('CondorUi is Ready');
+    .run(function (logger) {
+      logger.success('CondorUi is Ready');
     });
 })();
