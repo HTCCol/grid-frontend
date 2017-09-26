@@ -9,29 +9,27 @@
   /* @ngInject */
   function LoginController ($scope, $location, $http, jwtLoginService, logger) {
 
-    $scope.required = true;
+    $scope.required = true
 
     $scope.login = function (user) {
 
       jwtLoginService.login(user).then(function (response) {
 
-        logger.info("Exito");
+        logger.success('Bienvenido a Condor UI')
 
         var token = response.data.token
 
         localStorage.setItem('token', token)
 
-        $location.path('/')
+        $location.path('/dashboard')
 
       }, function () {
 
-        logger.error("Login Incorrecto");
+        logger.error('Login Incorrecto')
         $scope.user.password = null
-
 
       })
     }
 
   }
-
 })()

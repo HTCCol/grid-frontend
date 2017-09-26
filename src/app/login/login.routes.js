@@ -5,24 +5,24 @@
     .config(appRun);
 
   /* @ngInject */
-  function appRun($stateProvider, $urlRouterProvider) {
+  function appRun($stateProvider) {
 
-    // Set default state
-    $urlRouterProvider.otherwise("/login");
-
-    $stateProvider.state('login', {
-      url: '/login',
+    var loginState = {
+      name : 'login',
+      url : '/login',
       templateUrl: 'app/login/login.html',
       controller: 'LoginController',
       resolve: {
         verifyToken: function ($location, jwtHelper) {
           var token = localStorage.getItem('token');
           if (token && !jwtHelper.isTokenExpired(token)) {
-            $location.path("/");
+            $location.path("/dashboard");
           }
         }
       }
-    });
+    }
+
+    $stateProvider.state(loginState);
   }
 
 })();
