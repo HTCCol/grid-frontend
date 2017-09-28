@@ -3,9 +3,11 @@
   angular.module('CondorUi', [
     'CondorUi.config',
     'CondorUi.core',
-    'CondorUi.login',
+    'CondorUi.autenticacion',
+    'CondorUi.dashboard',
+    'CondorUi.tareas'
   ])
-    .run(function () {
-      console.log('CondorUi is Ready');
+    .run(function (logger) {
+        logger.debug('CondorUi is Ready');
     });
 })();

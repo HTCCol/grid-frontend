@@ -20,6 +20,7 @@
       return {
         request: function (conf) {
           var token = localStorage.getItem('token');
+
           if (token && !jwtHelper.isTokenExpired(token)) {
             conf.headers.Authorization = 'Bearer ' + token;
           } else {
