@@ -10,7 +10,7 @@
     var loginState = {
       name : 'login',
       url : '/login',
-      templateUrl: 'app/login/login.html',
+      templateUrl: 'app/login/index.html',
       controller: 'LoginController',
       resolve: {
         verifyToken: function ($location, jwtHelper) {

@@ -6,13 +6,13 @@
      * Angular modules
      */
     'ui.router', // Angular flexible routing
-    'angular-jwt', // Angular Jwt helper
+    'angular-jwt', // Angular Jwt helper,
     /*
      * Our reusable cross app code modules
      */
     'blocks.logger'
   ])
-    .run(function () {
-      console.log('CondorUi Core is Ready')
+    .run(function (logger) {
+      logger.debug('CondorUi Core is Ready')
     })
 })()

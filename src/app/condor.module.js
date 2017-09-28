@@ -4,9 +4,10 @@
     'CondorUi.config',
     'CondorUi.core',
     'CondorUi.login',
-    'CondorUi.dashboard'
+    'CondorUi.dashboard',
+    'CondorUi.tareas'
   ])
     .run(function (logger) {
-      logger.success('CondorUi is Ready');
+        logger.debug('CondorUi is Ready');
     });
 })();

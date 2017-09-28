@@ -1,10 +1,7 @@
 (function () {
   'use strict'
   angular.module('CondorUi.login')
-    .controller('LoginController', ['$scope', '$location', '$http', 'jwtLoginService', 'logger', LoginController])
-    .run(function () {
-      console.log('CondorUi Login is Ready')
-    })
+    .controller('LoginController', ['$scope', '$location', '$http', 'tareas', 'logger', LoginController]);
 
   /* @ngInject */
   function LoginController ($scope, $location, $http, jwtLoginService, logger) {

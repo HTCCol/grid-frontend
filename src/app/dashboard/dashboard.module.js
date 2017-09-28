@@ -3,7 +3,7 @@
   angular.module('CondorUi.dashboard', [
     'CondorUi.core'
   ])
-    .run(function () {
-      console.log('CondorUi Dashboard is Ready');
+    .run(function (logger) {
+      logger.debug('CondorUi Dashboard is Ready');
     });
 })();

@@ -1,9 +1,7 @@
 (function () {
   'use strict';
-  angular.module('CondorUi.login', [
-    'CondorUi.core'
-  ])
-    .run(function () {
-      console.log('CondorUi Login is Ready');
+  angular.module('CondorUi.login',[])
+    .run(function (logger) {
+      logger.debug('CondorUi Login is Ready');
     });
 })();

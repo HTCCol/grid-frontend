@@ -1,0 +1,11 @@
+(function () {
+  'use strict'
+  angular.module('CondorUi.dashboard')
+    .controller('DashboardController', ['$scope', '$location', '$http', 'logger', DashboardController]);
+
+  /* @ngInject */
+  function DashboardController ($scope, $location, $http, jwtLoginService, logger) {
+
+
+  }
+})()

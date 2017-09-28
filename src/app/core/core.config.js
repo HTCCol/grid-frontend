@@ -5,8 +5,9 @@
     .config(configure);
 
   /* @ngInject */
-  function configure($locationProvider, $httpProvider) {
+  function configure($locationProvider, $httpProvider, $urlRouterProvider) {
 
+    $urlRouterProvider.otherwise("/login");
 
     if (window.history && window.history.pushState) {
       $locationProvider.html5Mode({
