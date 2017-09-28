@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('CondorUi.login')
+  angular.module('CondorUi.autenticacion')
     .config(appRun);
 
   /* @ngInject */
@@ -10,7 +10,7 @@
     var loginState = {
       name : 'login',
       url : '/login',
-      templateUrl: 'app/login/index.html',
+      templateUrl: 'app/autenticacion/index.html',
       controller: 'LoginController',
       resolve: {
         verifyToken: function ($location, jwtHelper) {
@@ -22,7 +22,13 @@
       }
     }
 
+    var logoutState = {
+      name : 'logout',
+      url  : '/logout',
+      controller : 'LogoutController'
+    }
     $stateProvider.state(loginState);
+    $stateProvider.state(logoutState);
   }
 
 })();

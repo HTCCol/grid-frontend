@@ -1,13 +1,13 @@
 (function () {
-  'use strict'
+  'use strict';
 
-  angular.module('CondorUi.login')
-    .factory('jwtLoginService', jwtLoginService)
+  angular.module('CondorUi.autenticacion')
+    .factory('jwtLoginService', jwtLoginService);
 
-  jwtLoginService.$inject = ['$http', 'ENV_VARS']
+  jwtLoginService.$inject = ['$http', 'ENV_VARS'];
 
   function jwtLoginService ($http, ENV_VARS) {
-    var loginFactory = {}
+    var loginFactory = {};
 
     loginFactory.login = function (user) {
 
@@ -20,7 +20,7 @@
 
     }
 
-    return loginFactory
+    return loginFactory;
 
   }
 

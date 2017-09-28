@@ -1,7 +1,8 @@
 (function () {
   'use strict'
-  angular.module('CondorUi.login')
-    .controller('LoginController', ['$scope', '$location', '$http', 'tareas', 'logger', LoginController]);
+  angular.module('CondorUi.autenticacion')
+    .controller('LoginController', ['$scope', '$location', '$http', 'jwtLoginService', 'logger', LoginController])
+    .controller('LogoutController', ['$location', 'logger', 'Auth', LogoutController]);
 
   /* @ngInject */
   function LoginController ($scope, $location, $http, jwtLoginService, logger) {
@@ -18,6 +19,8 @@
 
         localStorage.setItem('token', token)
 
+        console.log(response.data)
+
         $location.path('/dashboard')
 
       }, function () {
@@ -26,7 +29,15 @@
         $scope.user.password = null
 
       })
-    }
+    };
+  };
 
-  }
+  /* @ngInject */
+  function LogoutController($location, logger, Auth){
+    Auth.logout(function(){
+      $location.path('/login');
+      logger.debug("Sesion Cerrada");
+    })
+  };
+
 })()

@@ -3,7 +3,7 @@
   angular.module('CondorUi', [
     'CondorUi.config',
     'CondorUi.core',
-    'CondorUi.login',
+    'CondorUi.autenticacion',
     'CondorUi.dashboard',
     'CondorUi.tareas'
   ])
