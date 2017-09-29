@@ -1,18 +1,48 @@
 <div class="sidebar" data-active-color="blue" data-background-color="black" data-image="/assets/utb.jpg">
   <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+    <a href="/" class="simple-text logo-mini">
       UI
     </a>
-    <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+    <a href="/" class="simple-text logo-normal">
       Condor UI
     </a>
   </div>
   <div class="sidebar-wrapper">
+    <div class="user">
+      <div class="photo">
+        <img src="/assets/avatar.png">
+      </div>
+      <div class="info">
+        <a data-toggle="collapse" href="#colapseInfo" class="collapsed">
+            <span >
+              {{ usuario.codigo | uppercase }}
+              <b class="caret"></b>
+            </span>
+        </a>
+        <div class="clearfix"></div>
+        <div class="collapse" id="colapseInfo">
+          <ul class="nav">
+            <li ng-class="{active : url == 'perfil'}">
+              <a href="/perfil">
+                <span class="sidebar-mini"><i class="material-icons">perm_identity</i></span>
+                <span class="sidebar-normal">Mi Perfil</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <ul class="nav">
-      <li class="active">
+      <li ng-class="{active : url == 'dashboard'}">
         <a href="/dashboard">
           <i class="material-icons">dashboard</i>
           <p>Dashboard</p>
+        </a>
+      </li>
+      <li>
+        <a href="/logout">
+          <i class="material-icons">arrow_back</i>
+          <p>Logout</p>
         </a>
       </li>
     </ul>

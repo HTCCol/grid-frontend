@@ -4,8 +4,8 @@
     .controller('DashboardController', ['$scope', '$location', '$http', 'logger', DashboardController]);
 
   /* @ngInject */
-  function DashboardController ($scope, $location, $http, jwtLoginService, logger) {
-
-
+  function DashboardController ($scope, $location, $http, logger) {
+      $scope.navBarTitle = "Dashboard";
+      $scope.url = "dashboard";
   }
 })()

@@ -19,7 +19,7 @@
                       <input class="form-control" placeholder="Codigo" autocomplete="off" style="cursor: auto;"
                              type="text" name="codigo"
                              ng-required="required"
-                             ng-model="user.codigo"
+                             ng-model="usuario.codigo"
                              pattern="^[(t|T]?([0-9]{8})$"/>
 
                       <span class="material-input"></span>
@@ -34,14 +34,14 @@
                       <input class="form-control" placeholder="Contraseña" autocomplete="off" type="password"
                              name="password"
                              ng-required="required"
-                             ng-model="user.password"
+                             ng-model="usuario.password"
                              pattern="^[A-Za-z0-9]{6}$"/>
                       <span class="material-input"></span></div>
                   </div>
                 </div>
                 <div class="footer text-center">
                   <button class="btn btn-success btn-lg" ng-disabled="loginForm.$invalid || loginForm.$pristine"
-                          ng-click="login(user)">Acceder
+                          ng-click="login(usuario)">Acceder
                   </button>
                 </div>
               </form>

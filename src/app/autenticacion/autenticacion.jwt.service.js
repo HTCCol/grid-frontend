@@ -9,13 +9,13 @@
   function jwtLoginService ($http, ENV_VARS) {
     var loginFactory = {};
 
-    loginFactory.login = function (user) {
+    loginFactory.login = function (usuario) {
 
       return $http({
         method: 'POST',
         skipAuthorization: true,
         url: ENV_VARS.apiUrl + '/login',
-        data: user
+        data: usuario
       })
 
     }

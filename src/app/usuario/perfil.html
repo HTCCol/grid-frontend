@@ -1,0 +1,77 @@
+<div class="wrapper">
+
+  <sidebar-directive></sidebar-directive>
+
+  <div class="main-panel">
+
+    <div data-ng-include="'app/layout/navbar.html'"></div>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header card-header-icon" data-background-color="rose">
+                <i class="material-icons">perm_identity</i>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Editar Perfil -
+                  <small class="category">Complete su perfil</small>
+                </h4>
+                <form lpformnum="1">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Código</label>
+                        <input class="form-control" type="text" value="{{ vm.usuario.codigo | uppercase}}" disabled>
+                        <span class="material-input"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Primer Nombre</label>
+                        <input class="form-control" type="text" value="{{ vm.usuario.nombre }}">
+                        <span class="material-input"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Primer Apellido</label>
+                        <input class="form-control" type="text" value="{{ vm.usuario.apellido }}">
+                        <span class="material-input"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Segundo Apellido</label>
+                        <input class="form-control" type="text" value="{{ vm.usuario.sApellido }}">
+                        <span class="material-input"></span>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group label-floating">
+                        <label class="control-label">Email</label>
+                        <input class="form-control" type="email" value="{{ vm.usuario.email }}">
+                        <span class="material-input"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-rose pull-right">Actualizar Perfil</button>
+                  <div class="clearfix"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

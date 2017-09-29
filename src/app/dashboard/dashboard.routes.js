@@ -9,7 +9,8 @@
     var dashboardState = {
       name: 'dashboard',
       url: '/dashboard',
-      templateUrl: 'app/dashboard/index.html'
+      templateUrl: 'app/dashboard/index.html',
+      controller: 'DashboardController'
     }
 
     $stateProvider.state(dashboardState)
